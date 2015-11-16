@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_refresh"
+        android:showAsAction="ifRoom"
+        android:title="@string/menu_refresh"
+        android:icon="@drawable/ic_action_refresh" />
+    
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/menu_settings"
+        android:icon="@drawable/ic_action_overflow"
+        android:showAsAction="ifRoom" >
+    	
+    	<menu>
+            <item 
+                android:id="@+id/menu_backup"
+				android:title="@string/menu_backup" />
+                  
+            <item 
+                android:id="@+id/menu_restore"
+				android:title="@string/menu_restore" />
+		</menu>
+		
+	</item>
+    
+</menu>

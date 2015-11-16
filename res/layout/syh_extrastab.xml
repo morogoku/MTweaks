@@ -1,0 +1,349 @@
+
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/SyhExtrasTabLayout"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent" 
+	android:orientation="vertical"
+	android:gravity="center"
+	android:paddingTop="0dip" >
+        
+   	<TextView
+		android:id="@+id/textViewDevInfo"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="#AA000000"
+		android:paddingBottom="3dip"
+		android:paddingTop="10dip"
+		android:text="@string/developer_info"
+		android:textColor="#FFFFFF"
+		android:textStyle="italic" />
+       
+	<TextView
+        android:id="@+id/textViewAppVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textStyle="italic"
+        android:background="#AA000000"
+        android:paddingTop="5dip"
+        android:paddingBottom="5dip" />
+
+	<TextView android:textColor="#ff66ccff"
+        android:background="#aa000000"
+        android:paddingTop="10.0dip"
+        android:paddingBottom="2.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/developer_info2"
+        android:textStyle="italic" />
+       
+	<TextView android:textColor="#ff00aa22"
+        android:background="#aa000000"
+        android:paddingTop="3.0dip"
+        android:paddingBottom="5.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/web"
+        android:textStyle="italic" />
+                      
+	<Button 
+        android:id="@+id/ResetSettings"
+        android:layout_width="250dip"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffffff"
+        android:text="@string/reset_settings" />
+       	    	 	
+	<Button
+        android:id="@+id/kernelweb"
+        android:layout_width="250dip"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffffff"
+        android:text="@string/kernel_web" />
+    	      	
+	<LinearLayout
+    	android:paddingTop="20dip"
+      	android:id="@+id/kernel_lay"
+		android:orientation="horizontal" 
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:baselineAligned="false" >
+							
+		<TextView 
+		    android:textColor="#ffffffff"
+		    android:layout_width="0dip"
+			android:layout_weight="0.35"
+	        android:paddingTop="3.0dip"
+	        android:layout_height="wrap_content"
+	        android:gravity="end"
+	        android:text="@string/kernel_ver_t"
+	        android:textStyle="italic" />
+		
+		<TextView
+		    android:id="@+id/kernel_ver_txt"
+		    android:textColor="#ffffffff"
+		    android:layout_width="0dip"
+			android:layout_weight="0.65"
+	        android:paddingTop="3.0dip"
+	        android:paddingLeft="3.0dip"
+	        android:paddingRight="3.0dip"
+	        android:layout_height="wrap_content"
+	        android:textStyle="italic" />
+			
+	</LinearLayout>
+		
+	<LinearLayout
+	    android:id="@+id/asv_lay"
+	    android:orientation="horizontal" 
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" >
+			
+		<TextView 
+		    android:textColor="#ffffffff"
+		    android:layout_width="0dip"
+			android:layout_weight="0.35"
+	        android:paddingTop="3.0dip"
+	        android:layout_height="wrap_content"
+	        android:gravity="end"
+	        android:text="@string/asv_t"
+	        android:textStyle="italic" />
+		
+		<TextView 
+		    android:id="@+id/asv_txt"
+		    android:textColor="#ffffffff"
+		    android:layout_width="0dip"
+			android:layout_weight="0.65"
+	        android:paddingTop="3.0dip"
+	        android:paddingLeft="3.0dip"
+	        android:paddingRight="3.0dip"
+	        android:layout_height="wrap_content"
+	        android:textStyle="italic" />
+			
+	</LinearLayout>
+	
+	<LinearLayout
+	    android:id="@+id/modelo_lay"
+	    android:orientation="horizontal" 
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" >
+			
+		<TextView 
+		    android:textColor="#ffffffff"
+		    android:layout_width="0dip"
+			android:layout_weight="0.35"
+	        android:paddingTop="3.0dip"
+	        android:layout_height="wrap_content"
+	        android:gravity="end"
+	        android:text="@string/modelo_t"
+	        android:textStyle="italic" />
+		
+		<TextView 
+		    android:id="@+id/modelo_txt"
+		    android:textColor="#ffffffff"
+		    android:layout_width="0dip"
+			android:layout_weight="0.65"
+	        android:paddingTop="3.0dip"
+	        android:paddingLeft="3.0dip"
+	        android:paddingRight="3.0dip"
+	        android:layout_height="wrap_content"
+	        android:textStyle="italic" />
+			
+	</LinearLayout>
+	
+	<LinearLayout
+	    android:id="@+id/rom_name_lay"
+	    android:orientation="horizontal" 
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" >
+			
+		<TextView 
+		    android:textColor="#ffffffff"
+		    android:layout_width="0dip"
+			android:layout_weight="0.35"
+	        android:paddingTop="3.0dip"
+	        android:layout_height="wrap_content"
+	        android:gravity="end"
+	        android:text="@string/rom_name_t"
+	        android:textStyle="italic" />
+		
+		<TextView 
+		    android:id="@+id/rom_name_txt"
+		    android:textColor="#ffffffff"
+		    android:layout_width="0dip"
+			android:layout_weight="0.65"
+	        android:paddingTop="3.0dip"
+	        android:paddingLeft="3.0dip"
+	        android:paddingRight="3.0dip"
+	        android:layout_height="wrap_content"
+	        android:textStyle="italic" />
+			
+	</LinearLayout>
+	
+	<LinearLayout
+	    android:id="@+id/rom_lay"
+	    android:orientation="horizontal" 
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" >
+			
+		<TextView 
+		    android:textColor="#ffffffff"
+		    android:layout_width="0dip"
+			android:layout_weight="0.35"
+	        android:paddingTop="3.0dip"
+	        android:layout_height="wrap_content"
+	        android:gravity="end"
+	        android:text="@string/rom_t"
+	        android:textStyle="italic" />
+		
+		<TextView 
+		    android:id="@+id/rom_txt"
+		    android:textColor="#ffffffff"
+		    android:layout_width="0dip"
+			android:layout_weight="0.65"
+	        android:paddingTop="3.0dip"
+	        android:paddingLeft="3.0dip"
+	        android:paddingRight="3.0dip"
+	        android:layout_height="wrap_content"
+	        android:textStyle="italic" />
+			
+	</LinearLayout>
+	
+	<LinearLayout
+	    android:id="@+id/modem_lay"
+	    android:orientation="horizontal" 
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" >
+			
+		<TextView 
+		    android:textColor="#ffffffff"
+		    android:layout_width="0dip"
+			android:layout_weight="0.35"
+	        android:paddingTop="3.0dip"
+	        android:layout_height="wrap_content"
+	        android:gravity="end"
+	        android:text="@string/modem_t"
+	        android:textStyle="italic" />
+		
+		<TextView 
+		    android:id="@+id/modem_txt"
+		    android:textColor="#ffffffff"
+		    android:layout_width="0dip"
+			android:layout_weight="0.65"
+	        android:paddingTop="3.0dip"
+	        android:paddingLeft="3.0dip"
+	        android:paddingRight="3.0dip"
+	        android:layout_height="wrap_content"
+	        android:textStyle="italic" />
+			
+	</LinearLayout>
+	
+	<LinearLayout
+	    android:id="@+id/boot_lay"
+	    android:orientation="horizontal" 
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" >
+			
+		<TextView 
+		    android:textColor="#ffffffff"
+		    android:layout_width="0dip"
+			android:layout_weight="0.35"
+	        android:paddingTop="3.0dip"
+	        android:layout_height="wrap_content"
+	        android:gravity="end"
+	        android:text="@string/boot_t"
+	        android:textStyle="italic" />
+		
+		<TextView 
+		    android:id="@+id/boot_txt"
+		    android:textColor="#ffffffff"
+		    android:layout_width="0dip"
+			android:layout_weight="0.65"
+	        android:paddingTop="3.0dip"
+	        android:paddingLeft="3.0dip"
+	        android:paddingRight="3.0dip"
+	        android:layout_height="wrap_content"
+	        android:textStyle="italic" />
+			
+	</LinearLayout>
+	
+	<LinearLayout
+	    android:id="@+id/android_lay"
+	    android:orientation="horizontal" 
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" >
+			
+		<TextView 
+		    android:textColor="#ffffffff"
+		    android:layout_width="0dip"
+			android:layout_weight="0.35"
+	        android:paddingTop="3.0dip"
+	        android:layout_height="wrap_content"
+	        android:gravity="end"
+	        android:text="@string/android_t"
+	        android:textStyle="italic" />
+		
+		<TextView 
+		    android:id="@+id/android_txt"
+		    android:textColor="#ffffffff"
+		    android:layout_width="0dip"
+			android:layout_weight="0.65"
+	        android:paddingTop="3.0dip"
+	        android:paddingLeft="3.0dip"
+	        android:paddingRight="3.0dip"
+	        android:layout_height="wrap_content"
+	        android:textStyle="italic" />
+			
+	</LinearLayout>
+	
+	<LinearLayout
+	    android:id="@+id/hwserial_lay"
+	    android:orientation="horizontal" 
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" >
+			
+		<TextView 
+		    android:textColor="#ffffffff"
+		    android:layout_width="0dip"
+			android:layout_weight="0.35"
+	        android:paddingTop="3.0dip"
+	        android:layout_height="wrap_content"
+	        android:gravity="end"
+	        android:text="@string/hwserial_t"
+	        android:textStyle="italic" />
+		
+		<TextView 
+		    android:id="@+id/hwserial_txt"
+		    android:textColor="#ffffffff"
+		    android:layout_width="0dip"
+			android:layout_weight="0.65"
+	        android:paddingTop="3.0dip"
+	        android:paddingLeft="3.0dip"
+	        android:paddingRight="3.0dip"
+	        android:layout_height="wrap_content"
+	        android:textStyle="italic" />
+			
+	</LinearLayout>
+		
+
+<!-- 
+       	<TextView
+	        android:id="@+id/textViewKernelVersion"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="#FFFFFF"
+	        android:background="#AA000000"
+	        android:paddingTop="0dip"
+	        android:paddingBottom="20dip" />
+  -->                      	
+</LinearLayout>
+
+ <!--        
+       	<Button 
+        android:id="@+id/PayPalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:typeface="serif"
+        android:textColor="#ffffffff"
+        android:text="@string/paypal"/>
+  -->   

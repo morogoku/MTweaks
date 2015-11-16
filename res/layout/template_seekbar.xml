@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.morogoku.seekbar.MainActivity" >
+<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center"
+	    android:orientation="horizontal"
+	    android:paddingTop="2dip">
+	    
+    <Button 
+	    android:id="@+id/button1"
+	    android:layout_width="40dip"
+	    android:layout_height="35dip"
+	    android:textColor="#ffffffff"
+	    android:text="@string/btn1"
+    	/>
+    
+    <SeekBar
+        android:id="@+id/SyhSeekBar"
+        android:layout_width="260dip"
+        android:layout_height="wrap_content"
+        />
+    
+    <Button 
+	    android:id="@+id/button2"
+	    android:layout_width="40dip"
+	    android:layout_height="35dip"
+	    android:textColor="#ffffffff"
+	    android:text="@string/btn2"
+   		/>
+
+</LinearLayout>
+
+</RelativeLayout>
