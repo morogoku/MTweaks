@@ -511,6 +511,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         }
 	}
 
+	// Cuadro dialogo de guardar perfil
 	protected void showInputDialog() {
 
 		// get prompts.xml view
@@ -522,20 +523,28 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		final EditText editText = (EditText) promptView.findViewById(R.id.edittext);
 		// setup a dialog window
 		alertDialogBuilder.setCancelable(false)
+				// Si pulsamos OK, cargamos el dialogo de confirmacion de carga de perfil
 				.setPositiveButton(R.string.btn_ok, new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int id) {
-												
-						String name = editText.getText().toString();
+						// Guardamos el perfil						
+						final String name = editText.getText().toString();
 						Utils.executeRootCommandInThread("cat $PROFILE_PATH/`cat $ACTIVE_PROFILE`.profile > $PROFILE_PATH/"+name+".profile");
 						
+						// Seleccionamos y cargamos perfil creado
+						Utils.executeRootCommandInThread("/res/uci.sh select "+name);
+  		      	        Utils.executeRootCommandInThread("/res/uci.sh apply");
+  		      	        
+	  		      	    Toast toast1 = Toast.makeText(getApplicationContext(), (R.string.profile_create_ok), Toast.LENGTH_LONG);
+	  		        	toast1.show();
+  		      	        restart();
 					}
 				})
-				.setNegativeButton(R.string.btn_cancel,
-						new DialogInterface.OnClickListener() {
-							public void onClick(DialogInterface dialog, int id) {
-								dialog.cancel();
-							}
-						});
+				// Si pulsamos Cancelar salimos
+				.setNegativeButton(R.string.btn_cancel, new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+						dialog.cancel();
+					}
+				});
 
 		// create an alert dialog
 		AlertDialog alert = alertDialogBuilder.create();

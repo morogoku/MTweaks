@@ -53,14 +53,14 @@
         android:layout_width="250dip"
         android:layout_height="wrap_content"
         android:textColor="#ffffffff"
-        android:text="@string/reset_settings" />
+        android:text="@string/btn_reset_settings" />
        	    	 	
 	<Button
         android:id="@+id/kernelweb"
         android:layout_width="250dip"
         android:layout_height="wrap_content"
         android:textColor="#ffffffff"
-        android:text="@string/kernel_web" />
+        android:text="@string/btn_kernel_web" />
     	      	
 	<LinearLayout
     	android:paddingTop="20dip"

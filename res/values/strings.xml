@@ -20,12 +20,12 @@
     <string name="check_for_updates">Check For Updates</string>
     <string name="flash_kernel">Flash Kernel</string>
     <string name="coming_soon">Coming soon!</string>
-    <string name="reset_settings">Reset settings to default</string>
+    <string name="btn_reset_settings">Reset settings to default</string>
     <string name="developer_info">Developed by Gokhan Moral</string>
     <string name="developer_info2">Modified by morogoku</string>
     <string name="startmenu_no_root">No root access, or timeout!</string>
     <string name="loading">Loading! Please wait&#8230;</string>
-    <string name="kernel_web">MoRoKernel Web</string>
+    <string name="btn_kernel_web">MoRoKernel Web</string>
     <string name="web">www.esp-desarrolladores.com</string>
     <string name="btn1">-</string>
     <string name="btn2">+</string>
@@ -42,13 +42,15 @@
     <string name="btn_cancel">"Cancel"</string>
     <string name="btn_yes">"YES"</string>
     <string name="btn_no">"NO"</string>
-    <string name="warning_title">"Warning"</string>
+    <string name="warning_title">"¡¡ WARNING !!"</string>
     <string name="title_activity_list_profiles">Profile List</string>
     <string name="profile_warning">You have selected a new profile to restore, if you continue you will lose the current settings.\n\nAre you sure?</string>
+    <string name="profile_create_ok">Profile created successfully !!\n\nLoading new profile....</string>
     <string name="delete_warning">The selected profile will be deleted.\n\nAre you sure?</string>
     <string name="rename_title">Enter the new profile name.\n</string>
     <string name="no_modify_battery">The Battery profile can not be changed</string>
     <string name="no_modify_performance">The Performance profile can not be changed</string>
     <string name="no_modify_default">The Default profile can not be changed</string>
+    <string name="reset_settings">All settings will be reset.\nYou will have to relaunch the application.</string>
    
 </resources>

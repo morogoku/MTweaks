@@ -23,6 +23,7 @@ public class SyhExtrasTab extends SyhTab implements OnClickListener {
 		this.name = "Info";
 	}
 
+          
 	@Override
 	public View getCustomView(ViewGroup parent)
 	{
@@ -83,7 +84,7 @@ public class SyhExtrasTab extends SyhTab implements OnClickListener {
     	 //s += "\n ROM Version: " + android.os.Build.VERSION.INCREMENTAL;
     	 //s += "\n Banda Base: " + android.os.Build.getRadioVersion();
     	 //s += "\n Bootloader: " + android.os.Build.BOOTLOADER;
-    	 //s += "\n Versión Android: " + android.os.Build.VERSION.RELEASE;
+    	 //s += "\n Versiï¿½n Android: " + android.os.Build.VERSION.RELEASE;
        	 //s += "\n Nivel API ROM: " + android.os.Build.VERSION.SDK_INT;
        	 //s += "\n Hardware Serial: " + android.os.Build.SERIAL;
       	 //s += "\n Device: " + android.os.Build.DEVICE;
@@ -93,6 +94,7 @@ public class SyhExtrasTab extends SyhTab implements OnClickListener {
     	 
  		 return v;
 	}
+	
 	
 	@Override
 	public void onClick(View v) {
@@ -105,20 +107,24 @@ public class SyhExtrasTab extends SyhTab implements OnClickListener {
 	            break;
 	        case R.id.ResetSettings:
 	        	AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-	        	builder.setMessage("All settings will be reset. You will have to relaunch the application.")
-	        	       .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+	        	builder.setMessage(R.string.reset_settings)
+	        	       .setPositiveButton(R.string.btn_yes, new DialogInterface.OnClickListener() {
 	        	           public void onClick(DialogInterface dialog, int id) {
 	        	               // Handle Ok
-	        	           		Utils.executeRootCommandInThread("/res/uci.sh delete default");
-	        	           		System.exit(0);
+	        	           		Utils.executeRootCommandInThread("cp /res/customconfig/default.profile $PROFILE_PATH/default.profile");
+	        	      	        Utils.executeRootCommandInThread("cp /res/customconfig/battery.profile $PROFILE_PATH/battery.profile");
+	        	      	        Utils.executeRootCommandInThread("cp /res/customconfig/performance.profile $PROFILE_PATH/performance.profile");
+	        	      	        Utils.executeRootCommandInThread("/res/uci.sh select default");
+	        	      	        Utils.executeRootCommandInThread("/res/uci.sh apply");
+	        	      	        System.exit(0);
 	        	           }
 	        	       })
-	        	       .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+	        	       .setNegativeButton(R.string.btn_no, new DialogInterface.OnClickListener() {
 	        	           public void onClick(DialogInterface dialog, int id) {
 	        	               // Handle Cancel
 	        	           }
 	        	       })
-	        	       .setTitle("Warning")
+	        	       .setTitle(R.string.warning_title)
 	        	       .setIcon(R.drawable.ic_launcher)
 	        	       .create();
 	        	builder.show();

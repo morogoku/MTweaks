@@ -19,7 +19,7 @@
     <string name="check_for_updates">Buscando Actualizaciones</string>
     <string name="flash_kernel">Flasheando Kernel</string>
     <string name="coming_soon">Próximamente!</string>
-    <string name="reset_settings">Resetear ajustes</string>
+    <string name="btn_reset_settings">Resetear ajustes</string>
     <string name="developer_info">Desarrollado por Gokhan Moral</string>
     <string name="developer_info2">Modificado por morogoku</string>
     <string name="startmenu_no_root">Sin acceso root, o se acabo el tiempo!</string>
@@ -37,12 +37,14 @@
     <string name="btn_cancel">"Cancelar"</string>
     <string name="btn_yes">"SI"</string>
     <string name="btn_no">"NO"</string>
-    <string name="warning_title">"Atención"</string>
+    <string name="warning_title">"¡¡ ATENCION !!"</string>
     <string name="title_activity_list_profiles">Lista de Perfiles</string>
     <string name="profile_warning">Has seleccionado un nuevo perfil para restaurarlo, si continuas perderás la configuracion actual.\n\nEstás seguro?</string>
+	<string name="profile_create_ok">Perfil creado con exito !!\n\nCargando nuevo perfil...</string>
 	<string name="delete_warning">El perfil seleccionado va a ser eliminado.\n\nEstás seguro?</string>
 	<string name="rename_title">Introduzca el nuevo nombre del perfil.\n</string>
 	<string name="no_modify_battery">El perfil Battery no se puede modificar</string>
     <string name="no_modify_performance">El perfil Performance no se puede modificar</string>
     <string name="no_modify_default">El perfil default no se puede modificar</string>
+    <string name="reset_settings">Se restablecerán todos los ajustes.\nTendrá que reabrir la aplicación</string>
 </resources>

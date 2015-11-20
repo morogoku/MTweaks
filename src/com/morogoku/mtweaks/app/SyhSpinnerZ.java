@@ -164,7 +164,8 @@ public final class SyhSpinnerZ extends SyhControl implements OnItemSelectedListe
 		"<b>* ZaneZam Moderate:</b> NEW! setting based on 'zzopt' which has mainly (but not strictly only!) 2 cores online.<br><br>" +
 		"<b>* ZaneZam Performance:</b> old untouched setting (all you can get from zzmoove in terms of performance but still has the fast down scaling/hotplugging behaving)<br><br>" +
 		"<b>* ZaneZam InZane:</b> NEW! based on performance with new auto fast scaling active. a new experience!<br><br>" +
-		"<b>* ZaneZam Gaming:</b> NEW! based on performance with new scaling block enabled to avoid cpu overheating during gameplay<br>" ;
+		"<b>* ZaneZam Gaming:</b> NEW! based on performance with new scaling block enabled to avoid cpu overheating during gameplay<br><br>" +
+		"<b>* ZaneZam Relax:</b> NEW! based on moderate (except hotplug settings) with relaxed sleep settings (to react audio/bluetooth/wakeup issues)<br>";
 		tv2.setText(Html.fromHtml(s));
 		tv3.setText(Html.fromHtml(s2));
 	}

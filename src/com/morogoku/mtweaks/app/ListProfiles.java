@@ -51,7 +51,7 @@ public class ListProfiles extends Activity {
         //Creamos el array para almacenar el listado de archivos
         item = new ArrayList<String>();
       
-        String dirPath = "/data/.moro";
+        String dirPath = "/data/.mtweaks";
         
         File f = new File(dirPath);
         File[] filelist = f.listFiles();
