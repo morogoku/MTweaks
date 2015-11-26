@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="app_name">MTweaks</string>
@@ -9,7 +10,7 @@
     <string name="prof_default">Por defecto</string>
     <string name="prof_performance">Alto Rendimiento</string>
     <string name="prof_battery">Ahorro de bateria</string>
-    <string name="input_title">Introduzca nombre del nuevo perfil</string>
+    <string name="input_title">Introduzca nombre para el nuevo perfil.\n\nSe recomienda nombres cortos.\n</string>
     <string name="input_box">Introduzca el texto aquí&#8230;</string>
     <string name="title_activity_main">MTweaks</string>
     <string name="bottom_accept">Aplicar</string>
@@ -20,7 +21,7 @@
     <string name="flash_kernel">Flasheando Kernel</string>
     <string name="coming_soon">Próximamente!</string>
     <string name="btn_reset_settings">Resetear ajustes</string>
-    <string name="developer_info">Desarrollado por Gokhan Moral</string>
+    <string name="developer_info">Desarrollo original STweaks de Gokhan Moral</string>
     <string name="developer_info2">Modificado por morogoku</string>
     <string name="startmenu_no_root">Sin acceso root, o se acabo el tiempo!</string>
     <string name="loading">Cargando! Por favor espere&#8230;</string>
@@ -39,10 +40,13 @@
     <string name="btn_no">"NO"</string>
     <string name="warning_title">"¡¡ ATENCION !!"</string>
     <string name="title_activity_list_profiles">Lista de Perfiles</string>
-    <string name="profile_warning">Has seleccionado un nuevo perfil para restaurarlo, si continuas perderás la configuracion actual.\n\nEstás seguro?</string>
-	<string name="profile_create_ok">Perfil creado con exito !!\n\nCargando nuevo perfil...</string>
-	<string name="delete_warning">El perfil seleccionado va a ser eliminado.\n\nEstás seguro?</string>
+    <string name="profile_warning">Has seleccionado el perfil %1$s para restaurarlo, si continuas perderás la configuracion actual.\n\nEstás seguro?</string>
+	<string name="profile_create_ok">Perfil creado con éxito !!\n\nCargando nuevo perfil&#8230;</string>
+	<string name="delete_warning">El perfil %1$s va a ser eliminado.\n\nEstás seguro?</string>
+	<string name="delete_toast">Perfil %1$s eliminado con éxito</string>
 	<string name="rename_title">Introduzca el nuevo nombre del perfil.\n</string>
+	<string name="rename_active_profile">Se ha renombrado el perfil activo.\n\nCargando el nuevo perfil %1$s como activo&#8230;</string>
+	<string name="rename_profile">Perfil %1$s renombrado con éxito</string>
 	<string name="no_modify_battery">El perfil Battery no se puede modificar</string>
     <string name="no_modify_performance">El perfil Performance no se puede modificar</string>
     <string name="no_modify_default">El perfil default no se puede modificar</string>

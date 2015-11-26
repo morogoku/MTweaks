@@ -3,9 +3,7 @@ package com.morogoku.mtweaks.app;
 import com.morogoku.mtweaks.app.R;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.text.Html;
@@ -67,10 +65,7 @@ public class SyhExtrasTab extends SyhTab implements OnClickListener {
 	     final TextView hwserial = (TextView) v.findViewById(R.id.hwserial_txt);
 	     hwserial.setText(android.os.Build.SERIAL);
  		 
-     	 final Button button4 = (Button) v.findViewById(R.id.ResetSettings);
- 		 button4.setOnClickListener(this);
- 		 
- 		 final Button button5 = (Button) v.findViewById(R.id.kernelweb);
+		 final Button button5 = (Button) v.findViewById(R.id.kernelweb);
          button5.setOnClickListener(this);
   		 
     	 //final TextView tv2 = (TextView) v.findViewById(R.id.textViewKernelVersion);
@@ -105,30 +100,6 @@ public class SyhExtrasTab extends SyhTab implements OnClickListener {
 	            Intent i = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://www.esp-desarrolladores.com/showthread.php?t=4173"));
 	            objContext.startActivity(i);
 	            break;
-	        case R.id.ResetSettings:
-	        	AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-	        	builder.setMessage(R.string.reset_settings)
-	        	       .setPositiveButton(R.string.btn_yes, new DialogInterface.OnClickListener() {
-	        	           public void onClick(DialogInterface dialog, int id) {
-	        	               // Handle Ok
-	        	           		Utils.executeRootCommandInThread("cp /res/customconfig/default.profile $PROFILE_PATH/default.profile");
-	        	      	        Utils.executeRootCommandInThread("cp /res/customconfig/battery.profile $PROFILE_PATH/battery.profile");
-	        	      	        Utils.executeRootCommandInThread("cp /res/customconfig/performance.profile $PROFILE_PATH/performance.profile");
-	        	      	        Utils.executeRootCommandInThread("/res/uci.sh select default");
-	        	      	        Utils.executeRootCommandInThread("/res/uci.sh apply");
-	        	      	        System.exit(0);
-	        	           }
-	        	       })
-	        	       .setNegativeButton(R.string.btn_no, new DialogInterface.OnClickListener() {
-	        	           public void onClick(DialogInterface dialog, int id) {
-	        	               // Handle Cancel
-	        	           }
-	        	       })
-	        	       .setTitle(R.string.warning_title)
-	        	       .setIcon(R.drawable.ic_launcher)
-	        	       .create();
-	        	builder.show();
-	        	break;
 		}   
 	}
 

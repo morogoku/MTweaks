@@ -15,12 +15,6 @@ public final class R {
         public static final int ltgray=0x7f040000;
     }
     public static final class dimen {
-        /** 
-         Example customization of dimensions originally defined in res/values/dimens.xml
-         (such as screen margins) for screens with more than 820dp of available width. This
-         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
-    
-         */
         public static final int activity_horizontal_margin=0x7f050003;
         public static final int activity_vertical_margin=0x7f050004;
         public static final int padding_large=0x7f050002;
@@ -38,44 +32,44 @@ public final class R {
         public static final int AcceptDeclineLayout=0x7f090003;
         public static final int DeclineButton=0x7f090005;
         public static final int MainLayout=0x7f090001;
-        public static final int ResetSettings=0x7f09000e;
-        public static final int SpinnerDynamic=0x7f090028;
-        public static final int SyhButton=0x7f090022;
-        public static final int SyhCheckBox=0x7f090023;
+        public static final int SpinnerDynamic=0x7f090027;
+        public static final int SyhButton=0x7f090021;
+        public static final int SyhCheckBox=0x7f090022;
         public static final int SyhExtrasTabLayout=0x7f09000b;
-        public static final int SyhSeekBar=0x7f090026;
-        public static final int SyhSwitch=0x7f090029;
-        public static final int SyhTextView=0x7f090024;
+        public static final int SyhSeekBar=0x7f090025;
+        public static final int SyhSwitch=0x7f090028;
+        public static final int SyhTextView=0x7f090023;
         public static final int action_refresh=0x7f09002a;
         public static final int action_settings=0x7f09002b;
-        public static final int android_lay=0x7f09001e;
-        public static final int android_txt=0x7f09001f;
-        public static final int asv_lay=0x7f090012;
-        public static final int asv_txt=0x7f090013;
-        public static final int boot_lay=0x7f09001c;
-        public static final int boot_txt=0x7f09001d;
-        public static final int button1=0x7f090025;
-        public static final int button2=0x7f090027;
+        public static final int android_lay=0x7f09001d;
+        public static final int android_txt=0x7f09001e;
+        public static final int asv_lay=0x7f090011;
+        public static final int asv_txt=0x7f090012;
+        public static final int boot_lay=0x7f09001b;
+        public static final int boot_txt=0x7f09001c;
+        public static final int button1=0x7f090024;
+        public static final int button2=0x7f090026;
         public static final int edittext=0x7f090008;
-        public static final int hwserial_lay=0x7f090020;
-        public static final int hwserial_txt=0x7f090021;
-        public static final int kernel_lay=0x7f090010;
-        public static final int kernel_ver_txt=0x7f090011;
-        public static final int kernelweb=0x7f09000f;
+        public static final int hwserial_lay=0x7f09001f;
+        public static final int hwserial_txt=0x7f090020;
+        public static final int kernel_lay=0x7f09000f;
+        public static final int kernel_ver_txt=0x7f090010;
+        public static final int kernelweb=0x7f09000e;
         public static final int list=0x7f090000;
         public static final int menu_backup=0x7f09002c;
         public static final int menu_restore=0x7f09002d;
-        public static final int modelo_lay=0x7f090014;
-        public static final int modelo_txt=0x7f090015;
-        public static final int modem_lay=0x7f09001a;
-        public static final int modem_txt=0x7f09001b;
+        public static final int modelo_lay=0x7f090013;
+        public static final int modelo_txt=0x7f090014;
+        public static final int modem_lay=0x7f090019;
+        public static final int modem_txt=0x7f09001a;
         public static final int pager=0x7f090006;
+        public static final int profile_active=0x7f090029;
         public static final int rename_edittext=0x7f09000a;
         public static final int rename_textView=0x7f090009;
-        public static final int rom_lay=0x7f090018;
-        public static final int rom_name_lay=0x7f090016;
-        public static final int rom_name_txt=0x7f090017;
-        public static final int rom_txt=0x7f090019;
+        public static final int rom_lay=0x7f090017;
+        public static final int rom_name_lay=0x7f090015;
+        public static final int rom_name_txt=0x7f090016;
+        public static final int rom_txt=0x7f090018;
         public static final int textView=0x7f090007;
         public static final int textViewAppVersion=0x7f09000d;
         public static final int textViewDevInfo=0x7f09000c;
@@ -116,6 +110,7 @@ public final class R {
         public static final int btn_yes=0x7f060027;
         public static final int check_for_updates=0x7f060010;
         public static final int coming_soon=0x7f060012;
+        public static final int delete_toast=0x7f06002e;
         public static final int delete_warning=0x7f06002d;
         public static final int developer_info=0x7f060014;
         public static final int developer_info2=0x7f060015;
@@ -132,16 +127,18 @@ public final class R {
         public static final int menu_settings=0x7f060001;
         public static final int modelo_t=0x7f06001e;
         public static final int modem_t=0x7f060021;
-        public static final int no_modify_battery=0x7f06002f;
-        public static final int no_modify_default=0x7f060031;
-        public static final int no_modify_performance=0x7f060030;
+        public static final int no_modify_battery=0x7f060032;
+        public static final int no_modify_default=0x7f060034;
+        public static final int no_modify_performance=0x7f060033;
         public static final int prof_battery=0x7f060008;
         public static final int prof_default=0x7f060006;
         public static final int prof_performance=0x7f060007;
         public static final int profile_create_ok=0x7f06002c;
         public static final int profile_warning=0x7f06002b;
-        public static final int rename_title=0x7f06002e;
-        public static final int reset_settings=0x7f060032;
+        public static final int rename_active_profile=0x7f060030;
+        public static final int rename_profile=0x7f060031;
+        public static final int rename_title=0x7f06002f;
+        public static final int reset_settings=0x7f060035;
         public static final int rom_name_t=0x7f06001f;
         public static final int rom_t=0x7f060020;
         public static final int startmenu_initial=0x7f06000e;

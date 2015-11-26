@@ -10,7 +10,7 @@
     <string name="prof_default">Default</string>
     <string name="prof_performance">High Performance</string>
     <string name="prof_battery">Battery saving</string>
-    <string name="input_title">Enter new profile name</string>
+    <string name="input_title">Enter new profile name.\n\nShort names are recommended.\n</string>
     <string name="input_box">Enter text here&#8230;</string>
     <string name="title_activity_main">MTweaks</string>
     <string name="bottom_accept">Apply</string>
@@ -21,7 +21,7 @@
     <string name="flash_kernel">Flash Kernel</string>
     <string name="coming_soon">Coming soon!</string>
     <string name="btn_reset_settings">Reset settings to default</string>
-    <string name="developer_info">Developed by Gokhan Moral</string>
+    <string name="developer_info">Original development STweaks of Gokhan Moral</string>
     <string name="developer_info2">Modified by morogoku</string>
     <string name="startmenu_no_root">No root access, or timeout!</string>
     <string name="loading">Loading! Please wait&#8230;</string>
@@ -44,13 +44,15 @@
     <string name="btn_no">"NO"</string>
     <string name="warning_title">"¡¡ WARNING !!"</string>
     <string name="title_activity_list_profiles">Profile List</string>
-    <string name="profile_warning">You have selected a new profile to restore, if you continue you will lose the current settings.\n\nAre you sure?</string>
+    <string name="profile_warning">You have selected %1$s profile to restore, if you continue you will lose the current settings.\n\nAre you sure?</string>
     <string name="profile_create_ok">Profile created successfully !!\n\nLoading new profile....</string>
-    <string name="delete_warning">The selected profile will be deleted.\n\nAre you sure?</string>
+    <string name="delete_warning">The profile %1$s will be deleted.\n\nAre you sure?</string>
+    <string name="delete_toast">Perfil %1$s eliminado con éxito</string>
     <string name="rename_title">Enter the new profile name.\n</string>
+    <string name="rename_active_profile">It renamed the active profile.\n\nLoading the new profile %1$s as active&#8230;</string>
+	<string name="rename_profile">%1$s profile renamed successfully</string>
     <string name="no_modify_battery">The Battery profile can not be changed</string>
     <string name="no_modify_performance">The Performance profile can not be changed</string>
     <string name="no_modify_default">The Default profile can not be changed</string>
     <string name="reset_settings">All settings will be reset.\nYou will have to relaunch the application.</string>
-   
 </resources>

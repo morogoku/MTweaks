@@ -95,11 +95,11 @@ public class ListProfiles extends Activity {
 	        public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
 	            
 	        	// Guardamos el nombre del archivo pulsado en itemValue
-	            //final String itemValue = (String) listView.getItemAtPosition(position);
+	            final String itemValue = (String) listView.getItemAtPosition(position);
             	 
 	            // Mostramos aviso de carga
 	            AlertDialog.Builder builder1 = new AlertDialog.Builder(mContext);
-	  	        builder1.setMessage(R.string.profile_warning)
+	            builder1.setMessage(getString(R.string.profile_warning, itemValue))
 	  	            .setPositiveButton(R.string.btn_yes, new DialogInterface.OnClickListener() {
 	  	            	public void onClick(DialogInterface dialog, int id) {
 	  	            		// Si pulsamos SI mandamos el nombre a MainActivity para cargar el perfil alli
@@ -126,7 +126,7 @@ public class ListProfiles extends Activity {
         listView.setOnItemLongClickListener(new OnItemLongClickListener() {
         	 
         	// Con pulsacion larga mostramos Opciones 
-        	public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+        	public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
         		
         		// Guardamos el nombre del archivo pulsado en itemValue 
         		final String itemValue = (String) listView.getItemAtPosition(position);
@@ -172,14 +172,30 @@ public class ListProfiles extends Activity {
 	  	        	     					public void onClick(DialogInterface dialog, int id) {
 	  	        	     						// Si aceptamos renombramos el perfil
 	  	        	     						String name = editText.getText().toString();
-	  	        	     						Utils.executeRootCommandInThread("cp $PROFILE_PATH/"+itemValue+".profile $PROFILE_PATH/"+name+".profile");
-	  	        	     						Utils.executeRootCommandInThread("rm $PROFILE_PATH/"+itemValue+".profile");
-	  	        	     						// Devuelvo el valor "restart" a MainActivity para que me retorne a ListProfiles.
-	  	        	     						// Si reinicio ListProfiles sin mas luego no funciona "onActivityResult" en MainActivity
-	  	        	     						Intent i = new Intent( ListProfiles.this, ListProfiles.class );
-	  	        		  	            		i.putExtra("filename", "restart");
-	  	        		  	            		setResult( Activity.RESULT_OK, i );
-	  	        		  	            		ListProfiles.this.finish();
+	  	        	     						Utils.executeRootCommandInThread("/res/uci.sh rename "+itemValue+" "+name);
+	  	        	     						
+	  	        	     						// Si renombramos el perfil activo restauramos el nuevo perfil
+	  	        	     						String perfilActivo = Utils.leer("/data/.mtweaks/.active.profile");
+	  	        	     						if (perfilActivo.equals(name)){
+	  	        	     							// Toast informativo
+	  	        	     							Toast toast1 = Toast.makeText(getApplicationContext(), getString(R.string.rename_active_profile, name), Toast.LENGTH_LONG);
+					  	        	    			toast1.show();
+					  	        	    			// Devuelvo el valor del nuevo perfil para recargarlo
+	  	        	     							Intent i = new Intent( ListProfiles.this, ListProfiles.class );
+		  	        	  	  	            		i.putExtra("filename", name);
+		  	        	  	  	            		setResult( Activity.RESULT_OK, i );
+		  	        	  	  	            		ListProfiles.this.finish();
+		  	        	  	  	            	// Si no es el perfil activo volvemos a restaurar perfil
+	  	        	     						} else {
+	  	        	     							Toast toast1 = Toast.makeText(getApplicationContext(), getString(R.string.rename_profile, name), Toast.LENGTH_LONG);
+					  	        	    			toast1.show();
+		  	        	     						// Devuelvo el valor "restart" a MainActivity para que me retorne a ListProfiles.
+		  	        	     						// Si reinicio ListProfiles sin mas luego no funciona "onActivityResult" en MainActivity
+		  	        	     						Intent i = new Intent( ListProfiles.this, ListProfiles.class );
+		  	        		  	            		i.putExtra("filename", "restart");
+		  	        		  	            		setResult( Activity.RESULT_OK, i );
+		  	        		  	            		ListProfiles.this.finish();
+	  	        	     						}
 	  	        	     					}
 	  	        	     				})
 	  	        	     				.setNegativeButton(R.string.btn_cancel, new DialogInterface.OnClickListener() {
@@ -197,11 +213,14 @@ public class ListProfiles extends Activity {
 								} else if (selected == 1) {
 									//acciones para eliminar
 									AlertDialog.Builder builder1 = new AlertDialog.Builder(mContext);
-					  	        	builder1.setMessage(R.string.delete_warning)
+					  	        	builder1.setMessage(getString(R.string.delete_warning, itemValue))
 				  	        	    	.setPositiveButton(R.string.btn_yes, new DialogInterface.OnClickListener() {
 				  	        	    		public void onClick(DialogInterface dialog, int id) {
 				  	        	    			// Si aceptamos eliminamos el perfil
 				  	        	    			Utils.executeRootCommandInThread("rm $PROFILE_PATH/"+itemValue+".profile");
+				  	        	    			// Toast de eliminacion
+				  	        	    			Toast toast1 = Toast.makeText(getApplicationContext(), getString(R.string.delete_toast, itemValue), Toast.LENGTH_LONG);
+				  	        	    			toast1.show();
 				  	        	    			// Devuelvo el valor "restart" a MainActivity para que me retorne a ListProfiles.
 	  	        	     						// Si reinicio ListProfiles sin mas luego no funciona "onActivityResult" en MainActivity
 				  	        	    			Intent i = new Intent( ListProfiles.this, ListProfiles.class );

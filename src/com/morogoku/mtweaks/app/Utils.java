@@ -2,6 +2,8 @@ package com.morogoku.mtweaks.app;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
@@ -120,7 +122,36 @@ public class Utils {
 
 		return isOk;
 	}
+	
+	public static String leer(String nombre){ // Lector de la primera linea de un archivo
+		
+		try {
+			File f;
+			FileReader lectorArchivo;
 
+			//Creamos el objeto del archivo que vamos a leer
+			f = new File(nombre);
+		
+			//Creamos el objeto FileReader que abrira el flujo(Stream) de datos para realizar la lectura
+			lectorArchivo = new FileReader(f);
+
+			//Creamos un lector en buffer para recopilar datos a travez del flujo "lectorArchivo" que hemos creado
+			BufferedReader br = new BufferedReader(lectorArchivo);
+
+			String l = br.readLine();
+		
+			br.close();
+		
+			lectorArchivo.close();
+
+			return l;
+
+		}catch(IOException e){
+			System.out.println("Error:"+e.getMessage());
+		}
+		return null;
+	}
+	
 	public static String executeRootCommandInThread(String command) {
 		Log.i(LOG_TAG, "[Running command:" + command + "]");
 

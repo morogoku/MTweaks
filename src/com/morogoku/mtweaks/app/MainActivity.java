@@ -570,6 +570,16 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     }
     
 	@Override
+	public boolean onPrepareOptionsMenu(Menu menu) {
+		MenuItem menuItem = menu.findItem(R.id.profile_active);
+		TextView textView = (TextView) menuItem.getActionView();
+
+		textView.setTextSize(16);
+		textView.setText(Utils.leer("/data/.mtweaks/.active.profile"));
+		return true;
+	}
+	
+	@Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
