@@ -19,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+
 public final class SyhSpinnerZ extends SyhControl implements OnItemSelectedListener{
 	
 	SyhSpinnerZ(Activity activityIn) {
@@ -130,10 +131,11 @@ public final class SyhSpinnerZ extends SyhControl implements OnItemSelectedListe
 		setSpinnerFromHardwareValue();
 		controlLayout.addView(spnnr);
 		
-		rayafinal();
+
+        rayafinal();
 		
 		TextView tv2 = new TextView(context);
-        controlLayout.addView(tv2); 
+        controlLayout.addView(tv2);
         
         rayafinal();
         
@@ -143,16 +145,36 @@ public final class SyhSpinnerZ extends SyhControl implements OnItemSelectedListe
 		//final TextView tv2 = (TextView) temp.findViewById(R.id.textZ);
 		//tv2.setText("Kernel version: " + System.getProperty("os.version"));
 		
-		String s = "<br>" +
-		"<b>PERFIL ZZMOOVE ACTIVO:</b> " + 
-				Utils.executeRootCommandInThread("cat /sys/devices/system/cpu/cpufreq/zzmoove/profile_number") + " " +
-				Utils.executeRootCommandInThread("cat /sys/devices/system/cpu/cpufreq/zzmoove/profile") +"<br><br>" +
-		"<i>Este es el perfil zzmoove activo ahora mismo leido directamente del kernel, "
-		+ "lo muestro aqui por si se cambia el selector cuando no esta activo el ZZMOOVE "
-		+ "entonces puede que luego no coincida cuando se active. "
-		+ "Si pasa esto selecionar otro perfil y aplicar."
-		+ "Para ver el cambio en PERFIL ZZMOOVE ACTIVO salir y entrar de nuevo en MTweaks</i><br>";
-		
+        String s;
+        String lang = Utils.executeRootCommandInThread("getprop persist.sys.language");
+        //Si esta en español
+        if (lang.startsWith("es")){
+        	s = "<br>" +
+        	"<b>PERFIL ZZMOOVE ACTIVO:</b> " + 
+        		Utils.executeRootCommandInThread("cat /sys/devices/system/cpu/cpufreq/zzmoove/profile_number") + " " +
+        		Utils.executeRootCommandInThread("cat /sys/devices/system/cpu/cpufreq/zzmoove/profile") +"<br><br>" +
+        	"<i>Este es el perfil zzmoove activo ahora mismo leido directamente del kernel, "
+        	+ "lo muestro aqui por si se cambia el selector cuando no esta activo el ZZMOOVE "
+        	+ "entonces puede que luego no coincida cuando se active. "
+        	+ "Si pasa esto selecionar otro perfil y aplicar."
+        	+ "Para ver el cambio en PERFIL ZZMOOVE ACTIVO salir y entrar de nuevo en MTweaks</i><br>";
+
+        }
+        //Si es cualquier otro
+        else {
+        	s = "<br>" +
+            "<b>ZZMOOVE ACTIVATED PROFILE:</b> " + 
+            	Utils.executeRootCommandInThread("cat /sys/devices/system/cpu/cpufreq/zzmoove/profile_number") + " " +
+            	Utils.executeRootCommandInThread("cat /sys/devices/system/cpu/cpufreq/zzmoove/profile") +"<br><br>" +
+            "<i>This is the current active zzmoove profile, read directly from the kernel, "
+            + "I show it here in case the selector switch is changed when ZZMOOVE is not active, "
+            + "then it may not match when is activated. "
+            + "If this happen, choose another profile and then aply. "
+            + "To see the change in ZZMOOVE ACTIVATED PROFILE, update or restart the MTweaks app.</i><br>";
+
+        }
+        	
+
 		String s2 = "<br>" +
 		"<b><u>LISTADO DE PERFILES ZZMOOVE</u></b><br><br>" +
  		"<b>* Default:</b> set governor defaults. <br><br>" +

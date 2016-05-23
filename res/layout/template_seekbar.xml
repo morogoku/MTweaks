@@ -12,7 +12,8 @@
 	    
     <Button 
 	    android:id="@+id/button1"
-	    android:layout_width="40dip"
+	    android:layout_marginStart="5dip"
+	    android:layout_width="35dip"
 	    android:layout_height="35dip"
 	    android:textColor="#ffffffff"
 	    android:text="@string/btn1"
@@ -26,7 +27,8 @@
     
     <Button 
 	    android:id="@+id/button2"
-	    android:layout_width="40dip"
+	    android:layout_marginEnd="5dip"
+	    android:layout_width="35dip"
 	    android:layout_height="35dip"
 	    android:textColor="#ffffffff"
 	    android:text="@string/btn2"
